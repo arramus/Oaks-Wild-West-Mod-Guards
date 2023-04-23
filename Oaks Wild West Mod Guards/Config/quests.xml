@@ -1,0 +1,200 @@
+<configs>
+ 	<append xpath="/quests">
+		
+		<quest id="GuardRabbit">
+			<property name="name_key" value="GuardRabbit"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GuardR"/>
+
+			<reward type="Item" id="GuardRabbit" value="1"/>			
+		</quest>
+		
+		<quest id="GuardWhiteRabbit">
+			<property name="name_key" value="GuardWhiteRabbit"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GuardWR"/>
+
+			<reward type="Item" id="GuardWhiteRabbit" value="1"/>			
+		</quest>
+
+		<quest id="GuardTurretStuner">
+			<property name="name_key" value="GuardTurretStuner"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GuardTurretStuner"/>
+
+			<reward type="Item" id="GuardTurretStuner" value="1"/>			
+		</quest>
+		
+		<quest id="TurretGuardSim">
+			<property name="name_key" value="TurretGuardSim"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="TurretGSim"/>
+
+			<reward type="Item" id="TurretGuardSim" value="1"/>			
+		</quest>
+		
+		<quest id="GuardTurretFox">
+			<property name="name_key" value="GuardTurretFox"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GTurretFox"/>
+
+			<reward type="Item" id="GuardTurretFox" value="1"/>			
+		</quest>
+		
+		<quest id="GuardTurretLizzy">
+			<property name="name_key" value="GuardTurretLizzy"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GTurretLizzy"/>
+
+			<reward type="Item" id="GuardTurretLizzy" value="1"/>			
+		</quest>
+		
+		<quest id="GuardTurretDre">
+			<property name="name_key" value="GuardTurretDre"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GTurretDre"/>
+
+			<reward type="Item" id="GuardTurretDre" value="1"/>			
+		</quest>
+		
+		<quest id="GuardTurretBandit">
+			<property name="name_key" value="GuardTurretBandit"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GTurretBandit"/>
+
+			<reward type="Item" id="GuardTurretBandit" value="1"/>			
+		</quest>
+		
+		<quest id="GuardTurretBanditFoxy">
+			<property name="name_key" value="GuardTurretBanditFoxy"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="GTurretBanditFoxy"/>
+
+			<reward type="Item" id="GuardTurretBanditFoxy" value="1"/>			
+		</quest>
+		
+		<quest id="TurretGuardLeader">
+			<property name="name_key" value="TurretGuardLeader"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="TurretGLeader"/>
+
+			<reward type="Item" id="TurretGuardLeader" value="1"/>			
+		</quest>
+		
+		<quest id="TurretGuardCompoundBowMan">
+			<property name="name_key" value="TurretGuardCompoundBowMan"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="TurretGCompoundBowMan"/>
+
+			<reward type="Item" id="TurretGuardCompoundBowMan" value="1"/>			
+		</quest>
+
+		<quest id="TurretGuardDarkstardragon">
+			<property name="name_key" value="TurretGuardDarkstardragon"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="TurretGDarkstardragon"/>
+
+			<reward type="Item" id="TurretGuardDarkstardragon" value="1"/>		
+		</quest>
+
+	<quest id="TurretGuardJoJo">
+			<property name="name_key" value="TurretGuardJoJo"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="TurretGJoJo"/>
+
+			<reward type="Item" id="TurretGuardJoJo" value="1"/>			
+		</quest>
+
+		<quest id="TurretGuardLezabel">
+			<property name="name_key" value="TurretGuardLezabel"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="TurretGLezabel"/>
+
+			<reward type="Item" id="TurretGuardLezabel" value="1"/>			
+		</quest>
+
+		<quest id="TurretGuardOakraven">
+			<property name="name_key" value="TurretGuardOakraven"/>
+			<property name="subtitle_key" value="Get_Guard"/>
+			<property name="description_key" value="Guard"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="category_key" value="quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="difficulty" value="easy"/>
+			<property name="offer_key" value="TurretGOakraven"/>
+
+			<reward type="Item" id="TurretGuardOakraven" value="1"/>			
+		</quest>		
+
+	</append>	
+</configs>

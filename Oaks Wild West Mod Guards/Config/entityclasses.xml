@@ -1,0 +1,504 @@
+<configs>
+
+	<append xpath="/entity_classes">
+
+		<entity_class name="ZombieTemplate2" extends="zombieTemplateMale">
+			<property name="EntityType" value="Zombie" />
+			<!--property name="Mesh" value="Zombies/zombie01Ragdoll" /-->
+			<property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab"/>
+			<property name="Prefab" value="NPC" />
+			<property name="Class" value="EntityZombie" />
+			<property name="Parent" value="Enemies" />
+			<property name="IsEnemyEntity" value="true" />
+			<property name="HandItem" value="meleeHandZombie01" />
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert" />
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense" />
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain" />
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath" />
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack" />
+			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+			<property name="PainResistPerHit" value=".5"/><!-- Radiated -->
+			<property name="AttackTimeoutDay" value="1.5" />
+			<property name="AttackTimeoutNight" value="1.1" />
+			<property name="WalkType" value="7" />
+			<property name="ModelType" value="ZombieUMA" />
+			<property name="RootMotion" value="true" />
+			<property name="HasRagdoll" value="true" />
+			<!--property name="AvatarController" value="AvatarZombieUMAController" /-->
+			<property name="PhysicsBody" value="zombieUMA" />
+			<property name="HasDeathAnim" value="false" />
+			<property name="TimeStayAfterDeath" value="30" />
+			<property name="ExperienceGain" value="0"/> <!-- Applies for all human Guards -->
+			<property name="LootDropProb" value="0"/> <!-- Applies for all human Guards -->			
+		</entity_class>
+		
+		<entity_class name="GuardTemplate" extends="animalTemplateTimid">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Tags" value="entity,animal,Guardrabbit,perkAT03"/>
+			<property name="Class" value="EntityAnimalStag"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Faction" value="animals"/>
+			<property name="Mass" value="12"/>
+			<property name="Weight" value="10"/>
+			<property name="SwimOffset" value="2"/>
+			<property name="HasRagdoll" value="false"/>
+	
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="40"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+
+            <property name="AIGroupCircle" value="1"/>
+	        <property name="AINoiseSeekDist" value="3"/>
+	        <property name="AIPathCostScale" value=".4, .6"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-2" value="ApproachSpot"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityEnemyAnimal,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<!-- Gameplay -->
+			<property name="PainResistPerHit" value=".75"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>			
+			<property name="ExperienceGain" value="0"/> <!-- GuardRabbit XP Removed -->	
+			<property name="MoveSpeed" value="2.1"/>
+			<property name="MoveSpeedAggro" value="2.2, 2.2"/>
+
+
+			<property name="DeadBodyHitPoints" value="175"/>
+		</entity_class>
+		
+		<entity_class name="GuardRabbit" extends="animalTemplateTimid">
+			<property name="Tags" value="entity,animal,Guardrabbit,perkAT03"/>
+			<property name="Class" value="EntityAnimalStag"/>
+			<property name="Prefab" value="/Entities/Animals/Rabbit/RABBIT"/>
+			<property name="SizeScale" value="1.8"/>
+			<property name="Mesh" value=""/>
+			<property name="Parent" value="Animals"/>
+			<property name="Faction" value="animals"/>
+			<property name="PhysicsBody" value="rabbit"/>
+			<property name="Mass" value="12"/>
+			<property name="Weight" value="10"/>
+			<property name="SoundHurt" value="Animals/rabbitpain"/>
+			<property name="SoundDeath" value="Animals/rabbitdeath"/>
+			<property name="SwimOffset" value="2"/>
+			<property name="HasRagdoll" value="false"/>
+	
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="40"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+
+            <property name="AIGroupCircle" value="1"/>
+	        <property name="AINoiseSeekDist" value="3"/>
+	        <property name="AIPathCostScale" value=".4, .6"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-2" value="ApproachSpot"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityEnemyAnimal,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<!-- Gameplay -->
+			<property name="PainResistPerHit" value=".75"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>			
+			<property name="ExperienceGain" value="0"/> <!-- GuardRabbit XP Removed -->	
+			<property name="MoveSpeed" value="2.1"/>
+			<property name="MoveSpeedAggro" value="2.2, 2.2"/>
+
+
+			<property name="DeadBodyHitPoints" value="175"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="1"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		</effect_group>
+		</entity_class>
+		
+		<entity_class name="GuardWhiteRabbit" extends="animalTemplateTimid">
+			<property name="Tags" value="entity,animal,Guardrabbit,perkAT03"/>
+			<property name="Class" value="EntityAnimalStag"/>
+			<property name="Prefab" value="/Entities/Animals/Rabbit/RABBIT"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?Misc/snowballPrefab/materials/snowball"/>
+			<property name="SizeScale" value="1.8"/>
+			<property name="Mesh" value=""/>
+			<property name="Parent" value="Animals"/>
+			<property name="Faction" value="animals"/>
+			<property name="PhysicsBody" value="rabbit"/>
+			<property name="Mass" value="12"/>
+			<property name="Weight" value="10"/>
+			<property name="SoundHurt" value="Animals/rabbitpain"/>
+			<property name="SoundDeath" value="Animals/rabbitdeath"/>
+			<property name="SwimOffset" value="2"/>
+			<property name="HasRagdoll" value="false"/>
+	
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="40"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+
+            <property name="AIGroupCircle" value="1"/>
+	        <property name="AINoiseSeekDist" value="3"/>
+	        <property name="AIPathCostScale" value=".4, .6"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-2" value="ApproachSpot"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityEnemyAnimal,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<!-- Gameplay -->
+			<property name="PainResistPerHit" value=".75"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>			
+			<property name="ExperienceGain" value="0"/> <!-- GuardRabbit XP Removed -->	
+			<property name="MoveSpeed" value="2.1"/>
+			<property name="MoveSpeedAggro" value="2.2, 2.2"/>
+
+
+			<property name="DeadBodyHitPoints" value="175"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="1"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		</effect_group>
+		</entity_class>
+
+<!-- Human Guards switched from Class EntitySurvivor to Class EntityTrader for A20 -->
+
+			<entity_class name="GuardTurretStuner">
+			<property name="HideInSpawnMenu" value="true"/>
+		<property name="Archetype" value="TurretGuardSim" />
+	<property name="EntityType" value="Player"/>
+	<property name="Faction" value="whiteriver"/>
+	<!--property name="Mesh" value="Player/Male/player_maleRagdoll"/-->
+	<property name="AvatarController" value="AvatarUMAController"/>
+	<property name="ModelType" value="NpcUMA"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="Prefab" value="NPC"/>
+	<property name="Class" value="EntityTrader"/>
+	<property name="Parent" value="Players"/>
+	<property name="PhysicsBody" value="PlayerUMA"/>
+	<property name="IsEnemyEntity" value="false"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	<property name="MoveSpeed" value="0"/>
+	<property name="MoveSpeedAggro" value="0,0"/>
+	<property name="MoveSpeedPanic" value="0"/>	
+			<property name="DismemberMultiplierHead" value="0"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeWpnBatonT2StunBaton"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeWpnBatonT2StunBaton"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeWpnBatonT2StunBaton"/>
+	
+	<property name="Weight" value="70"/>
+	<property name="SurfaceCategory" value="organic"/>
+	<property name="SoundRandomTime" value="200.0"/>
+	<property name="SoundRandom" value="Player_Male/player1stamina"/>
+	<property name="SoundHurt" value="Player_Male/player1painlg"/>
+	<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+	<property name="SoundDeath" value="Player_Male/player1death"/>
+	<property name="SoundStamina" value="Player_Male/player1stamina"/>
+	<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+	<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+	<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+	<property name="TimeStayAfterDeath" value="0.5"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="AIPackages" value="Oaks Basic,Oaks Melee"/>
+	<effect_group>
+		<requirement name="HoldingItemHasTags" tags="melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attIntellect,perkElectrocutioner,canHaveCosmetic"/>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="1"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="TurretGuardSim" extends="GuardTurretStuner">
+    <property name="Archetype" value="TurretGuardSim" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="GuardTurretPistol,ammo9mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GuardTurretPistol,ammo9mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GuardTurretPistol,ammo9mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="GuardTurretLizzy" extends="GuardTurretStuner">
+    <property name="Archetype" value="TurretGuardLizzy" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="TurretGuardAutoShotgun,ammoTurretGuardShell"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="TurretGuardAutoShotgun,ammoTurretGuardShell"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="TurretGuardAutoShotgun,ammoTurretGuardShell"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="GuardTurretDre" extends="GuardTurretStuner">
+    <property name="Archetype" value="TurretGuardDre" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="TurretGuardMGT1AK47,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="TurretGuardMGT1AK47,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="TurretGuardMGT1AK47,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="GuardTurretFox" extends="GuardTurretStuner">
+    <property name="Archetype" value="TurretGuardFox" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="GuardCrossBow,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GuardCrossBow,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GuardCrossBow,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="GuardTurretBandit" extends="GuardTurretStuner">
+    <property name="Archetype" value="Banditguardman" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="TurretGuardMGT3M60,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="TurretGuardMGT3M60,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="TurretGuardMGT3M60,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="GuardTurretBanditFoxy" extends="GuardTurretStuner">
+    <property name="Archetype" value="BanditFemaleguard" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="TurretGuardTacticalAR,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="TurretGuardTacticalAR,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="TurretGuardTacticalAR,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="TurretGuardLeader" extends="GuardTurretStuner">
+    <property name="Archetype" value="TurretGuardLeader" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="TurretGuardSniperRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="TurretGuardSniperRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="TurretGuardSniperRifle,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="TurretGuardCompoundBowMan" extends="GuardTurretStuner">
+    <property name="Archetype" value="FireStarter" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="TurretGuardCompoundBow,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="TurretGuardCompoundBow,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="TurretGuardCompoundBow,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>	
+
+<entity_class name="TurretGuardDarkstardragon" extends="GuardTurretStuner">
+    <property name="Archetype" value="Darkstardragon" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="GuardLeverActionRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GuardLeverActionRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GuardLeverActionRifle,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>	
+
+<entity_class name="TurretGuardJoJo" extends="GuardTurretStuner">
+    <property name="Archetype" value="jojo" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="GuardPipeRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GuardPipeRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GuardPipeRifle,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>	
+
+<entity_class name="TurretGuardLezabel" extends="GuardTurretStuner">
+    <property name="Archetype" value="Lezabel" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="GuardMachineGun,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GuardMachineGun,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GuardMachineGun,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>
+
+<entity_class name="TurretGuardOakraven" extends="GuardTurretStuner">
+    <property name="Archetype" value="Oakraven" />
+    <property name="HideInSpawnMenu" value="true"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="GuardSniperRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="GuardSniperRifle,ammo762mmBulletGuard"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="GuardSniperRifle,ammo762mmBulletGuard"/>
+	
+	<property name="MaxViewAngle" value="360"/>
+	<property name="SightRange" value="35"/>
+	<property name="SightLightThreshold" value="-2,150"/>
+	<property name="YawRange" value="90"/>
+	<property name="PitchRange" value="90"/>
+	
+	<effect_group>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+	</effect_group>
+
+	<property name="AIPackages" value="Oaks Ranged"/>
+</entity_class>	
+
+	</append>
+
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='AITask-5']/@data">class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag</set>
+    <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='AITarget-1']/@data">class=EntityNPC,EntityEnemyAnimal,EntityPlayer,EntityAnimalStag</set>
+    <set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='AITarget-4']/@data">class=EntityPlayer,0,0,EntityNPC,0,0,EntityAnimalStag,0,0</set>
+    <set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='AITask-3']/@data">class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag</set>
+    <set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='AITask-3']/@data">class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag</set>
+    <set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITask-2']/@data">class=EntityNPC,20,EntityPlayer,20,EntityAnimalStag,20</set>
+    <set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITarget-4']/@data">class=EntityPlayer,20,15,EntityNPC,15,10,EntityAnimalStag,20,15</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='AITask-3']/@data">class=EntityPlayer,20,EntityNPC,20,EntityAnimalStag,20</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='AITarget-1']/@data">class=EntityPlayer,EntityNPC,EntityAnimalStag</set>
+    <set xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='AITarget-4']/@data">class=EntityPlayer,20,0,EntityNPC,0,0,EntityAnimalStag,20,0</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='AITask-4']/@data">class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag</set>
+    <set xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='AITarget-4']/@data">class=EntityPlayer,20,0,EntityNPC,0,0,EntityAnimalStag,20,0</set>	
+	
+</configs>

@@ -1,0 +1,25 @@
+<configs>
+
+	<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='modMeleeT1']">	
+		<trader_item_group name="guards">
+			<item name="GuardRabbit1"/>
+			<item name="TurretGuardSim1"/>
+			<item name="GuardTurretDre1"/>
+			<item name="GuardTurretFox1"/>
+			<item name="GuardTurretLizzy1"/>
+			<item name="GuardTurretBandit1"/>
+			<item name="GuardTurretBanditFoxy1"/>
+			<item name="TurretGuardLeader1"/>
+			<item name="TurretGuardCompoundBowMan1"/>
+			<item name="TurretGuardDarkstardragon1"/>
+			<item name="TurretGuardJoJo1"/>
+			<item name="TurretGuardLezabel1"/>
+			<item name="TurretGuardOakraven1"/>			
+		</trader_item_group>		
+	</insertBefore>
+
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
+		<item group="guards" count="1,2"/>		
+	</append>
+	
+</configs>

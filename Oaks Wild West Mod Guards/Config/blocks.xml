@@ -1,0 +1,647 @@
+<configs>
+	<append xpath="/blocks" >
+	
+	<block name="GuardSpawnPlateBow">
+	<property name="Extends" value="looseBoardsTrapBlock1x1" param1="CustomIcon,Path"/>
+	<property name="Model" value="Plate"/>
+	<property name="SortOrder2" value="0150"/>
+	<property name="Texture" value="191,191,191,191,191,191" />	
+	<!--property name="Texture" value="342,342,173,173,173,173"/-->
+	<property name="CanPickup" value="true"/>
+	</block>
+		
+			<block name="GuardRabbit">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="Entities/Animals/Rabbit/sleeperPose/idleSleeperRabbit"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperRabbitAnimal"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardRabbitAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardRabbitSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardRabbitSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardRabbit"/>			
+		</block>
+		<block name="GuardRabbitAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+			<block name="GuardWhiteRabbit">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="Entities/Animals/Rabbit/sleeperPose/idleSleeperRabbit"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperRabbitAnimal"/>
+			<property name="CustomIconTint" value="255, 230, 230"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardWhiteRabbitAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardWhiteRabbitSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardWhiteRabbitSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardWhiteRabbit"/>			
+		</block>
+		<block name="GuardWhiteRabbitAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+<!-- Human Guards switched from Class EntitySurvivor to Class EntityTrader for A20 -->		
+		
+	<block name="GuardTurretStuner">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardTurretStunerAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardTurretStunerSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardTurretStunerSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardTurretStuner"/>			
+		</block>
+		<block name="GuardTurretStunerAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="TurretGuardSim">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>	
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="TurretGuardSimAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="TurretGuardSimSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="TurretGuardSimSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="TurretGuardSim"/>			
+		</block>
+		<block name="TurretGuardSimAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="GuardTurretLizzy">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardTurretLizzyAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardTurretLizzySpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardTurretLizzySpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardTurretLizzy"/>			
+		</block>
+		<block name="GuardTurretLizzyAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="GuardTurretDre">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardTurretDreAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardTurretDreSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardTurretDreSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardTurretDre"/>			
+		</block>
+		<block name="GuardTurretDreAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="GuardTurretFox">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardTurretFoxAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardTurretFoxSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardTurretFoxSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardTurretFox"/>			
+		</block>
+		<block name="GuardTurretFoxAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="GuardTurretBandit">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardTurretBanditAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardTurretBanditSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardTurretBanditSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardTurretBandit"/>			
+		</block>
+		<block name="GuardTurretBanditAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="GuardTurretBanditFoxy">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="GuardTurretBanditFoxyAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="GuardTurretBanditFoxySpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="GuardTurretBanditFoxySpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="GuardTurretBanditFoxy"/>			
+		</block>
+		<block name="GuardTurretBanditFoxyAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="TurretGuardLeader">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="TurretGuardLeaderAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="TurretGuardLeaderSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="TurretGuardLeaderSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="TurretGuardLeader"/>			
+		</block>
+		<block name="TurretGuardLeaderAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+		<block name="TurretGuardCompoundBowMan">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="TurretGuardCompoundBowAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="TurretGuardCompoundBowSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="TurretGuardCompoundBowSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="TurretGuardCompoundBowMan"/>
+		</block>
+		<block name="TurretGuardCompoundBowAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+		
+                <!--NEW GUARDS RETURNING TO TRADITIONAL SPAWNING -->
+				
+		<block name="TurretGuardDarkstardragon">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="TurretGuardDarkstardragonAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="TurretGuardDarkstardragonSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="TurretGuardDarkstardragonSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="TurretGuardDarkstardragon"/>
+		</block>
+		<block name="TurretGuardDarkstardragonAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+
+		<block name="TurretGuardJoJo">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="TurretGuardJoJoAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="TurretGuardJoJoSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="TurretGuardJoJoSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="TurretGuardJoJo"/>
+		</block>
+		<block name="TurretGuardJoJoAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+
+		<block name="TurretGuardLezabel">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="TurretGuardLezabelAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="TurretGuardLezabelSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="TurretGuardLezabelSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="TurretGuardLezabel"/>
+		</block>
+		<block name="TurretGuardLezabelAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+
+		<block name="TurretGuardOakraven">
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="Model" value="#Entities/Zombies?Zombies/SleeperPoses/idleSleepPrefab.prefab"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<property name="CustomIcon" value="sleeperIdle"/>
+			<property name="CustomIconTint" value="153, 102, 0"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="DescriptionKey" value="GenericGuardDesc"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="TurretGuardOakravenAnimal"/>
+			<property name="PlantGrowing.GrowOnTop" value="TurretGuardOakravenSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		<block name="TurretGuardOakravenSpawner">
+		<property name="CreativeMode" value="None"/>
+			<property name="Material" value="PetAnimalMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<!--property name="Model" value="Entities/Decor/cobwebPrefab"/-->
+			<property name="Model" value="Entities/Quests/rally_pointPrefab"/>			
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="TurretGuardOakraven"/>
+		</block>
+		<block name="TurretGuardOakravenAnimal">
+		<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>
+			<property name="Texture" value="191,191,191,191,191,191" />			
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="looseBoardsTrapPlate1x1"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>		
+
+	</append>
+
+</configs>

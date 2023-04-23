@@ -1,0 +1,89 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+GuardRabbit,blocks,block,,,Cookies (Desert Hare Guard),,,,,
+GuardWhiteRabbit,blocks,block,,,Cream (Snow Hare Guard),,,,,
+
+TurretGuardSim,blocks,block,,,Tallman (Guard 1),,,,,
+GuardTurretLizzy,blocks,block,,,Lizzy (Guard 2),,,,,
+GuardTurretDre,blocks,block,,,Dre (Guard 3),,,,,
+GuardTurretFox,blocks,block,,,Medusa (Guard 4),,,,,
+GuardTurretBandit,blocks,block,,,Briston (Guard 5),,,,,
+GuardTurretBanditFoxy,blocks,block,,,Foxy (Guard 6),,,,,
+TurretGuardLeader,blocks,block,,,Chief (Guard 7),,,,,
+TurretGuardCompoundBowMan,blocks,block,,,arramus (Guard 8),,,,,
+TurretGuardDarkstardragon,blocks,block,,,Darkstardragon (Guard 9),,,,,
+TurretGuardJoJo,blocks,block,,,Jo Jo (Guard 10),,,,,
+TurretGuardLezabel,blocks,block,,,Lezabel (Guard 11),,,,,
+TurretGuardOakraven,blocks,block,,,Oakraven (Guard 12),,,,,
+
+GenericGuardDesc,items,,,,"This is a Guard, place down and it will stand guard until a zombie is in range at which point it will go into attack mode."
+
+GuardRabbit1,items,Quest - Challenge,,,"Cookies, the Desert Hare Guard"
+GuardRabbit1Desc,items,Quest - Challenge,,,"You have Cookies, the Desert Hare Guard."
+GuardR,Quest,Quest Info,,,"Accept to Release Cookies, the Desert Hare Guard, for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+GuardWhiteRabbit1,items,Quest - Challenge,,,"Cream, the Snow Hare Guard"
+GuardWhiteRabbit1Desc,items,Quest - Challenge,,,"You have Cream, the Snow Hare Guard."
+GuardWR,Quest,Quest Info,,,"Accept to Release Cream, the Snow Hare Guard, for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+TurretGuardSim1,items,Quest - Challenge,,,"Guard Tallman"
+TurretGuardSim1Desc,items,Quest - Challenge,,,"You have Guard Tallman."
+TurretGSim,Quest,Quest Info,,,"Accept to Release Guard Tallman for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+GuardTurretLizzy1,items,Quest - Challenge,,,"Guard Lizzy"
+GuardTurretLizzy1Desc,items,Quest - Challenge,,,"You have Guard Lizzy."
+GTurretLizzy,Quest,Quest Info,,,"Accept to Release Guard Lizzy for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+GuardTurretDre1,items,Quest - Challenge,,,"Guard Dre"
+GuardTurretDre1Desc,items,Quest - Challenge,,,"You have Guard Dre."
+GTurretDre,Quest,Quest Info,,,"Accept to Release Guard Dre for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+GuardTurretFox1,items,Quest - Challenge,,,"Guard Medusa"
+GuardTurretFox1Desc,items,Quest - Challenge,,,"You have Guard Medusa."
+GTurretFox,Quest,Quest Info,,,"Accept to Release Guard Medusa for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+GuardTurretBandit1,items,Quest - Challenge,,,"Guard Briston"
+GuardTurretBandit1Desc,items,Quest - Challenge,,,"You have Guard Briston."
+GTurretBandit,Quest,Quest Info,,,"Accept to Release Guard Briston for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+GuardTurretBanditFoxy1,items,Quest - Challenge,,,"Guard Foxy"
+GuardTurretBanditFoxy1Desc,items,Quest - Challenge,,,"You have Guard Foxy."
+GTurretBanditFoxy,Quest,Quest Info,,,"Accept to Release Guard Foxy for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+TurretGuardLeader1,items,Quest - Challenge,,,"Guard Chief"
+TurretGuardLeader1Desc,items,Quest - Challenge,,,"You have Guard Chief."
+TurretGLeader,Quest,Quest Info,,,"Accept to Release Guard Chief for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+TurretGuardCompoundBowMan1,items,Quest - Challenge,,,"Guard arramus"
+TurretGuardCompoundBowMan1Desc,items,Quest - Challenge,,,"You have Guard arramus."
+TurretGCompoundBowMan,Quest,Quest Info,,,"Accept to Release Guard arramus for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+TurretGuardDarkstardragon1,items,Quest - Challenge,,,"Guard Darkstardragon"
+TurretGuardDarkstardragon1Desc,items,Quest - Challenge,,,"You have Guard Darkstardragon, The Old Git."
+TurretGDarkstardragon,Quest,Quest Info,,,"Accept to Release Guard Darkstardragon for Placement."
+Get_Guard,Quest,Quest Info,,,":P"
+
+TurretGuardJoJo1,items,Quest - Challenge,,,"Guard Jo Jo"
+TurretGuardJoJo1Desc,items,Quest - Challenge,,,"You have Guard Jo Jo."
+TurretGJoJo,Quest,Quest Info,,,"Accept to Release Guard Jo Jo for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+TurretGuardLezabel1,items,Quest - Challenge,,,"Guard Lezabel"
+TurretGuardLezabel1Desc,items,Quest - Challenge,,,"You have Guard Lezabel."
+TurretGLezabel,Quest,Quest Info,,,"Accept to Release Guard Lezabel for Placement."
+Get_Guard,Quest,Quest Info,,,":)"
+
+TurretGuardOakraven1,items,Quest - Challenge,,,"Guard Oakraven"
+TurretGuardOakraven1Desc,items,Quest - Challenge,,,"You have Guard Oakraven."
+TurretGOakraven,Quest,Quest Info,,,"Accept to Release Guard Oakraven for Placement."
+Get_Guard,Quest,Quest Info,,,"^^"
